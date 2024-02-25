@@ -17,8 +17,8 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'SEO-title' => 'Title-' . $this->faker->sentence(7),
-            'SEO-description' => 'Desc-' . $this->faker->sentence(12),
+            'SEO_title' => 'Title-' . $this->faker->sentence(7),
+            'SEO_description' => 'Desc-' . $this->faker->sentence(12),
             'title' => $this->faker->sentence(5),
             'content' => $this->faker->text(500),
             'image' => 'image.jpg',

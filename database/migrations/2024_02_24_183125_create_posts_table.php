@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('SEO-title')->nullable();
-            $table->string('SEO-description')->nullable();
+            $table->string('SEO_title')->nullable();
+            $table->string('SEO_description')->nullable();
             $table->string('title');
             $table->text('content');
             $table->string('image')->nullable();
