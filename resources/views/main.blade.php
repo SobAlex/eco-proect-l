@@ -13,13 +13,17 @@
     <header class="border-bottom lh-1 py-3">
         <div class="container">
             <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4 pt-1">
-                    <a class="link-secondary" href="#">Subscribe</a>
+                <div class="col-3 pt-1">
+                    <a class="link-secondary" href="#">Logo</a>
+                    <a class="link-secondary" href="#">ООО "Природные ресурсы"</a>
                 </div>
-                <div class="col-4 text-center">
-                    <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Large</a>
+                <div class="col-3 text-center">
+                    <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Адрес</a>
                 </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="col-3 text-center">
+                    <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Контактная инфа</a>
+                </div>
+                <div class="col-3 d-flex justify-content-end align-items-center">
                     <a class="link-secondary" href="#" aria-label="Search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
                             <title>Search</title>
@@ -27,7 +31,7 @@
                             <path d="M21 21l-5.2-5.2" />
                         </svg>
                     </a>
-                    <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="#"><i class="icon-user"></i>Sign up</a>
                 </div>
             </div>
             <div class="nav-scroller py-1 mb-3 border-bottom">
@@ -35,38 +39,54 @@
                 <nav>
                     <ul class="menu">
                         <li>
-                            <a href="#"><i class="icon-home"></i>Home</a>
+                            <a href="#"><i class="icon-circle-blank"></i>О компании</a>
                             <ul class="sub-menu">
-                                <li><a href="#">sub 1</a></li>
-                                <li><a href="#">sub 2</a></li>
-                                <li><a href="#">sub 3</a></li>
+                                <li><a href="#">Сертификаты</a></li>
+                                <li><a href="#">Отзывы</a></li>
                             </ul>
                         </li>
+
                         <li>
-                            <a href="#"><i class="icon-user"></i>About</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-camera"></i>Some</a>
+                            <a href="#"><i class="icon-gift"></i>Услуги</a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="#">Some 1</a>
+                                    <a href="#">Категория 1</a>
+                                    <ul>
+                                        <li><a href="#">Услуга 1</a></li>
+                                        <li><a href="#">Услуга 2</a></li>
+                                        <li><a href="#">Услуга 3</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Some 3 Some</a>
+                                    <a href="#">Категория 2</a>
                                     <ul>
-                                        <li><a href="#">Some 4</a></li>
-                                        <li><a href="#">Some 5</a></li>
-                                        <li><a href="#">Some 6</a></li>
+                                        <li><a href="#">Услуга 1</a></li>
+                                        <li><a href="#">Услуга 2</a></li>
+                                        <li><a href="#">Услуга 3</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Категория 3</a>
+                                    <ul>
+                                        <li><a href="#">Услуга 1</a></li>
+                                        <li><a href="#">Услуга 2</a></li>
+                                        <li><a href="#">Услуга 3</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Категория 4</a>
+                                    <ul>
+                                        <li><a href="#">Услуга 1</a></li>
+                                        <li><a href="#">Услуга 2</a></li>
+                                        <li><a href="#">Услуга 3</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="icon-bullhorn"></i>Some</a>
+                            <a href="#"><i class="icon-bullhorn"></i>Контакты</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="icon-envelope-alt"></i>Some</a>
-                        </li>
+
                     </ul>
                 </nav>
             </div>
@@ -80,21 +100,21 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ Vite::asset('resources/assets/img/ekologicheskoe-proektirovanie_1980.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ Vite::asset('resources/img/ekologicheskoe-proektirovanie_1980.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Some representative placeholder content for the first slide.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ Vite::asset('resources/assets/img/organizaciya-ekologicheskoj-bezopasnosti-na-predpriyatii.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ Vite::asset('resources/img/organizaciya-ekologicheskoj-bezopasnosti-na-predpriyatii.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Some representative placeholder content for the second slide.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ Vite::asset('resources/assets/img/sanitarno-epidemiologicheskaya-ekspertiza-promyshlennyh-zdanij_1366.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ Vite::asset('resources/img/sanitarno-epidemiologicheskaya-ekspertiza-promyshlennyh-zdanij_1366.jpg') }}" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Third slide label</h5>
                                 <p>Some representative placeholder content for the third slide.</p>

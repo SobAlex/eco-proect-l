@@ -1,4 +1,4 @@
 import "./bootstrap";
 
-import.meta.glob(["../assets/img/**"]);
-import.meta.glob(["../assets/fonts/**"]);
+import.meta.glob(["/img/**"]);
+import.meta.glob(["/font/**"]);
