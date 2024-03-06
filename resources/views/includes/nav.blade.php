@@ -20,12 +20,12 @@
         <a class="btn btn-sm btn-outline-secondary" href="#"><i class="icon-user"></i>Sign up</a>
     </div>
 </div>
-<div class="nav-scroller py-1 mb-3 border-bottom">
+<div class="nav-scroller py-1">
     <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Меню</a>
     <nav>
         <ul class="menu">
             <li>
-                <a href="#"><i class="icon-circle-blank"></i>О компании</a>
+                <a href="#">О компании</a>
                 <ul class="sub-menu">
                     <li><a href="#">Сертификаты</a></li>
                     <li><a href="#">Отзывы</a></li>
@@ -33,7 +33,7 @@
             </li>
 
             <li>
-                <a href="{{ route('category.index') }}"><i class="icon-gift"></i>Услуги</a>
+                <a href="{{ route('category.index') }}">Услуги</a>
                 <ul class="sub-menu">
                     <li>
                         <a href="{{ route('category.show', $id = 1) }}">Категория 1</a>
@@ -70,7 +70,11 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="icon-bullhorn"></i>Контакты</a>
+                <a href="#">Контакты</a>
+            </li>
+
+            <li>
+                <a href="{{ route('home.index') }}">Админ</a>
             </li>
 
         </ul>

@@ -1,10 +1,10 @@
-@extends('layouts.page')
+@extends('layouts.main')
 
 @section('content')
 
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
     <div class="col-lg-6 px-0">
-        <h1 class="display-4 fst-italic">Это каталог услуг</h1>
+        <h1 class="display-4 fst-italic">Это каталог услуг с категориями</h1>
         <p class="lead my-3">Тут дохуя всего лишнего. Но в целом много и полезного. Прибраться и будет заебок. Тут пока
             ничего не работает так что можешь не тыкать.</p>
         <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>

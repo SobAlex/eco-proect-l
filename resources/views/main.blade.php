@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('includes.slider')
+
 <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom text-center">Основные категории услуг</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
