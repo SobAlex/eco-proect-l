@@ -74,7 +74,7 @@
             </li>
 
             <li>
-                <a href="{{ route('home.index') }}">Админ</a>
+                <a href="{{ route('admin.home.index') }}">Админ</a>
             </li>
 
         </ul>
