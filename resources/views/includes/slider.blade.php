@@ -7,24 +7,24 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ Vite::asset('resources/img/ekologicheskoe-proektirovanie_1980.jpg') }}" class="d-block w-100" alt="...">
+                <img src="{{ asset($slide1->image) }}" class="d-block w-100 h-100" alt="{{$slide1->image}}">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>{{ $slide1->title }}</h5>
+                    <p>{{ $slide1->content }}</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{ Vite::asset('resources/img/organizaciya-ekologicheskoj-bezopasnosti-na-predpriyatii.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-item active">
+                <img src="{{ asset($slide2->image) }}" class="d-block w-100 h-100" alt="{{$slide2->image}}">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <h5>{{ $slide2->title }}</h5>
+                    <p>{{ $slide2->content }}</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{ Vite::asset('resources/img/sanitarno-epidemiologicheskaya-ekspertiza-promyshlennyh-zdanij_1366.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-item active">
+                <img src="{{ asset($slide3->image) }}" class="d-block w-100 h-100" alt="{{$slide3->image}}">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h5>{{ $slide3->title }}</h5>
+                    <p>{{ $slide3->content }}</p>
                 </div>
             </div>
         </div>

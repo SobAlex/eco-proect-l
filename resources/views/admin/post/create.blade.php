@@ -6,7 +6,7 @@
 
     <h1>Создать услугу</h1>
 
-    <form action="{{ route('admin.post.store') }}" method="POST">
+    <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
 
         @csrf
 
@@ -26,18 +26,37 @@
         </div>
 
         <div class="mb-3">
-            <label for="image" class="form-label">изображение</label>
-            <input type="text" name="image" class="form-control" id="image">
-        </div>
-
-        <div class="mb-3">
             <label for="content" class="form-label">Контент</label><br>
             <textarea name="content" id="content" cols="30" rows="10"></textarea>
         </div>
 
         <div class="mb-3">
+            <label for="image" class="form-label">изображение</label>
+            <input type="file" name="image" class="form-control" id="image">
+        </div>
+
+        <div class="form-group">
+            <select class="form-control select2" name="category_id" style="width: 100%;">
+                <option selected="selected" disabled>Выберите категорию</option>
+                @foreach($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-3">
             <button type="submit">Создать</button>
         </div>
+
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
 
     </form>
 

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Добро пожаловать пользователь такойто!</h1>
+<h1>Добро пожаловать, {{ $user->name }}!</h1>
 
 <ul class="nav flex-column">
     <li class="nav-item">

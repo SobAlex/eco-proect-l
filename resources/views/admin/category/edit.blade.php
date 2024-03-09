@@ -6,7 +6,7 @@
 
     <h1>Редактировать категорию</h1>
 
-    <form action="{{ route('admin.category.update') }}" method="POST">
+    <form action="{{ route('admin.category.update', $category->id) }}" method="POST" enctype="multipart/form-data">
 
         @csrf
 
@@ -18,8 +18,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="SEO-descriptin" class="form-label">Descriptin</label>
-            <input type="text" name="SEO_descriptin" class="form-control" id="SEO-descriptin" value="{{ $category->SEO_description }}">
+            <label for="SEO-description" class="form-label">Description</label>
+            <input type="text" name="SEO_description" class="form-control" id="SEO-description" value="{{ $category->SEO_description }}">
         </div>
 
         <div class=" mb-3">
@@ -29,7 +29,9 @@
 
         <div class=" mb-3">
             <label for="image" class="form-label">изображение</label>
-            <input type="text" name="image" class="form-control" id="image" value="{{ $category->image }}">
+            <input type="file" name="image" class="form-control" id="image" value="{{ $category->image }}">
+            <br>
+            <img src="{{asset($category->image)}}" alt="{{ $category->image }}" width="100">
         </div>
 
         <div class=" mb-3">

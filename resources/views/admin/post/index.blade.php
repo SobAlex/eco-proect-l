@@ -6,28 +6,25 @@
 
     <h1>Список услуг</h1>
 
-    @foreach ($posts as $post)
+    <div></div><a href="{{ route('admin.post.create') }}">Создать</a>
+</div>
+<br>
 
-    <h2>{{ $post->title  }}</h2>
-    <p>{{ $post->content }}</p>
-    <img src="{{ $post->image }}" alt="{{ $post->image }}">
-    <br>
-    <a href="{{ route('admin.post.show', $post->id) }}">Подробнее</a>
-    <br>
-    <a href="{{ route('admin.post.create') }}">Создать</a>
-    <br>
-    <a href="{{ route('admin.post.edit', $post->id) }}">Редактировать</a>
+@foreach ($posts as $post)
 
-    <form action="{{ route('admin.post.delete', $post->id) }}" method="POST">
+<h2>{{ $post->title  }}</h2>
 
-        @csrf
-        @method('DELETE')
+<img class="w-25" src="{{asset($post->image)}}" alt="{{ $post->image }}">
 
-        <button type="submit">Удалить</button>
+<p>{{ $post->content }}</p>
 
-    </form>
+<a href="{{ route('admin.post.show', $post->id) }}">Подробнее</a>
 
-    @endforeach
+<br>
+<br>
+<br>
+
+@endforeach
 
 </div>
 

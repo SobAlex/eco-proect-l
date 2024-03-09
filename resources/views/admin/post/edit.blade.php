@@ -6,7 +6,7 @@
 
     <h1>Редактировать услугу</h1>
 
-    <form action="{{ route('admin.post.update') }}" method="POST">
+    <form action="{{ route('admin.post.update', $post->id) }}" method="POST" enctype="multipart/form-data">
 
         @csrf
 
@@ -28,13 +28,24 @@
         </div>
 
         <div class=" mb-3">
-            <label for="image" class="form-label">изображение</label>
-            <input type="text" name="image" class="form-control" id="image" value="{{ $post->image }}">
+            <label for="content" class="form-label">Контент</label><br>
+            <textarea name="content" id="content" cols="30" rows="10">{{ $post->content }}</textarea>
         </div>
 
         <div class=" mb-3">
-            <label for="content" class="form-label">Контент</label><br>
-            <textarea name="content" id="content" cols="30" rows="10">{{ $post->content }}</textarea>
+            <label for="image" class="form-label">изображение</label>
+            <input type="file" name="image" class="form-control" id="image" value="{{ $post->image }}">
+            <br>
+            <img src="{{asset($post->image)}}" alt="{{ $post->image }}" width="100">
+        </div>
+
+        <div class="form-group">
+            <select class="form-control select2" name="category_id" style="width: 100%;">
+                <option selected="selected" disabled>Выберите категорию</option>
+                @foreach($categories as $category)
+                <option {{ $category->id === $post->category->id ? ' selected': '' }} value="{{ $category->id }}">{{ $category->title }}</option>
+                @endforeach
+            </select>
         </div>
 
         <div class="mb-3">

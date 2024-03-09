@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // test route
-Route::get('test/{category}', [TestController::class, 'test']);
+Route::get('test/{id}', [TestController::class, 'test']);
 
 
 // Видимая часть
@@ -23,7 +23,7 @@ Route::get('/admin/posts/create', App\Http\Controllers\Admin\Post\CreateControll
 Route::get('/admin/posts/{post}', App\Http\Controllers\Admin\Post\ShowController::class)->name('admin.post.show');
 Route::post('/admin/posts/', App\Http\Controllers\Admin\Post\StoreController::class)->name('admin.post.store');
 Route::get('/admin/posts/{post}/edit', App\Http\Controllers\Admin\Post\EditController::class)->name('admin.post.edit');
-Route::put('/admin/posts/', App\Http\Controllers\Admin\Post\UpdateController::class)->name('admin.post.update');
+Route::put('/admin/posts/{post}', App\Http\Controllers\Admin\Post\UpdateController::class)->name('admin.post.update');
 Route::delete('/admin/posts/{post}', App\Http\Controllers\Admin\Post\DeleteController::class)->name('admin.post.delete');
 
 Route::get('/admin/categories', App\Http\Controllers\Admin\Category\IndexController::class)->name('admin.category.index');
@@ -31,5 +31,5 @@ Route::get('/admin/categories/create', App\Http\Controllers\Admin\Category\Creat
 Route::get('/admin/categories/{category}', App\Http\Controllers\Admin\Category\ShowController::class)->name('admin.category.show');
 Route::post('/admin/categories/', App\Http\Controllers\Admin\Category\StoreController::class)->name('admin.category.store');
 Route::get('/admin/categories/{category}/edit', App\Http\Controllers\Admin\Category\EditController::class)->name('admin.category.edit');
-Route::put('/admin/categories/', App\Http\Controllers\Admin\Category\UpdateController::class)->name('admin.category.update');
+Route::put('/admin/categories/{category}', App\Http\Controllers\Admin\Category\UpdateController::class)->name('admin.category.update');
 Route::delete('/admin/categories/{category}', App\Http\Controllers\Admin\Category\DeleteController::class)->name('admin.category.delete');

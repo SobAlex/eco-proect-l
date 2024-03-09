@@ -156,3 +156,11 @@ nav {
 }
 @media (max-width: 320px) {
 }
+
+.carousel-item {
+    height: 350px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+}
