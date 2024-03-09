@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+
+
+// test route
+Route::get('test/{category}', [TestController::class, 'test']);
 
 
 // Видимая часть

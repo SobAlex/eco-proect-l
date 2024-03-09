@@ -18,7 +18,10 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('image')->nullable();
+
             $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->on('categories')->references('id');
+
             $table->boolean('isPublick')->default('1');
             $table->timestamps();
             $table->softDeletes();
