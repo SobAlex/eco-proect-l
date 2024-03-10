@@ -25,6 +25,7 @@ class UpdateRequest extends FormRequest
             'SEO_title' => 'nullable',
             'SEO_description' => 'nullable',
             'title' => 'required',
+            'short_content' => 'required',
             'content' => 'required',
             'image' => 'nullable|mimes:jpeg,png,jpg,svg,webp,gif',
         ];

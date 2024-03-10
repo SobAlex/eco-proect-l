@@ -21,6 +21,7 @@ class PostFactory extends Factory
             'SEO_title' => 'Title-' . $this->faker->sentence(7),
             'SEO_description' => 'Desc-' . $this->faker->sentence(12),
             'title' => $this->faker->sentence(5),
+            'short_content' => $this->faker->text(100),
             'content' => $this->faker->text(500),
             'image' => 'uploads/post/default.jpg',
             'category_id' => Category::get()->random()->id,

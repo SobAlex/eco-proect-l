@@ -22,7 +22,7 @@
                 </svg>
             </div>
             <h3 class="fs-2 text-body-emphasis">{{ $post->title }}</h3>
-            <p>{{ $post->content }}</p>
+            <p>{{ $post->short_content }}</p>
             <a href="{{ route('post.show', $post->id) }}" class="icon-link">
                 Подробнее
                 <svg class="bi">

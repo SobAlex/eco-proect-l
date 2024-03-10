@@ -26,6 +26,11 @@
         </div>
 
         <div class="mb-3">
+            <label for="short_content" class="form-label">Анонс</label><br>
+            <textarea name="short_content" id="short_content" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="mb-3">
             <label for="content" class="form-label">Контент</label><br>
             <textarea name="content" id="content" cols="30" rows="10"></textarea>
         </div>

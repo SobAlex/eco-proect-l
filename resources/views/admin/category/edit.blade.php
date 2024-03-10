@@ -13,12 +13,12 @@
         @method('PUT')
 
         <div class="mb-3">
-            <label for="SEO-title" class="form-label">Title</label>
+            <label for="SEO-title" class="form-label">SEO title</label>
             <input type="text" name="SEO_title" class="form-control" id="SEO-title" value="{{ $category->SEO_title }}">
         </div>
 
         <div class="mb-3">
-            <label for="SEO-description" class="form-label">Description</label>
+            <label for="SEO-description" class="form-label">SEO description</label>
             <input type="text" name="SEO_description" class="form-control" id="SEO-description" value="{{ $category->SEO_description }}">
         </div>
 
@@ -32,6 +32,11 @@
             <input type="file" name="image" class="form-control" id="image" value="{{ $category->image }}">
             <br>
             <img src="{{asset($category->image)}}" alt="{{ $category->image }}" width="100">
+        </div>
+
+        <div class=" mb-3">
+            <label for="short_content" class="form-label">Анонс</label><br>
+            <textarea name="short_content" id="short_content" cols="30" rows="10">{{ $category->short_content }}</textarea>
         </div>
 
         <div class=" mb-3">

@@ -35,38 +35,55 @@
             <li>
                 <a href="{{ route('category.index') }}">Услуги</a>
                 <ul class="sub-menu">
+
                     <li>
-                        <a href="{{ route('category.show', $id = 1) }}">Категория 1</a>
+                        <a href="{{ route('category.show', $cat1MenuItem->id) }}">Категория {{$cat1MenuItem->id}}</a>
                         <ul>
-                            <li><a href="{{ route('post.show', $id = 1) }}">Услуга 1</a></li>
-                            <li><a href="#">Услуга 2</a></li>
-                            <li><a href="#">Услуга 3</a></li>
+                            @foreach ($postsCat1MenuItems as $postsCat1MenuItem)
+
+                            <li><a href="{{ route('post.show', $postsCat1MenuItem->id) }}">Услуга {{ $postsCat1MenuItem->id }}</a></li>
+
+                            @endforeach
+
                         </ul>
                     </li>
+
                     <li>
-                        <a href="#">Категория 2</a>
+                        <a href="{{ route('category.show', $cat2MenuItem->id) }}">Категория {{$cat2MenuItem->id}}</a>
                         <ul>
-                            <li><a href="#">Услуга 1</a></li>
-                            <li><a href="#">Услуга 2</a></li>
-                            <li><a href="#">Услуга 3</a></li>
+                            @foreach ($postsCat2MenuItems as $postsCat2MenuItem)
+
+                            <li><a href="{{ route('post.show', $postsCat2MenuItem->id) }}">Услуга {{ $postsCat2MenuItem->id }}</a></li>
+
+                            @endforeach
+
                         </ul>
                     </li>
+
                     <li>
-                        <a href="#">Категория 3</a>
+                        <a href="{{ route('category.show', $cat3MenuItem->id) }}">Категория {{$cat3MenuItem->id}}</a>
                         <ul>
-                            <li><a href="#">Услуга 1</a></li>
-                            <li><a href="#">Услуга 2</a></li>
-                            <li><a href="#">Услуга 3</a></li>
+                            @foreach ($postsCat3MenuItems as $postsCat3MenuItem)
+
+                            <li><a href="{{ route('post.show', $postsCat3MenuItem->id) }}">Услуга {{ $postsCat3MenuItem->id }}</a></li>
+
+                            @endforeach
+
                         </ul>
                     </li>
+
                     <li>
-                        <a href="#">Категория 4</a>
+                        <a href="{{ route('category.show', $cat4MenuItem->id) }}">Категория {{$cat4MenuItem->id}}</a>
                         <ul>
-                            <li><a href="#">Услуга 1</a></li>
-                            <li><a href="#">Услуга 2</a></li>
-                            <li><a href="#">Услуга 3</a></li>
+                            @foreach ($postsCat4MenuItems as $postsCat4MenuItem)
+
+                            <li><a href="{{ route('post.show', $postsCat4MenuItem->id) }}">Услуга {{ $postsCat4MenuItem->id }}</a></li>
+
+                            @endforeach
+
                         </ul>
                     </li>
+
                 </ul>
             </li>
             <li>

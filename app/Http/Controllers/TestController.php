@@ -23,5 +23,18 @@ class TestController extends Controller
         $category = $postEdit->category;
 
         dd($category);
+
+        // Все категории по 4 поста
+        $postsCats = Category::with([
+            'posts' => function ($q) {
+                $q->latest()->take(4);
+            }
+        ])->get();
+
+        $postsCat1 = Category::where('id', $category1->id)->with([
+            'posts' => function ($q) {
+                $q->take(4);
+            }
+        ])->get();
     }
 }

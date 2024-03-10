@@ -17,7 +17,7 @@
                 </svg>
             </div>
             <h3 class="fs-2 text-body-emphasis">{{ $category->title }}</h3>
-            <p>{{ $category->content }}</p>
+            <p>{{ $category->short_content }}</p>
             <a href="{{ route('category.show', $category->id) }}" class="icon-link">
                 Подробнее
                 <svg class="bi">
