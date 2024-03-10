@@ -21,7 +21,7 @@ class CategoryFactory extends Factory
             'SEO_description' => 'Cat Desc-' . $this->faker->sentence(12),
             'title' => $this->faker->sentence(5),
             'content' => $this->faker->text(500),
-            'image' => 'image.jpg',
+            'image' => 'uploads/category/default.jpg',
         ];
     }
 }

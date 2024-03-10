@@ -22,7 +22,7 @@ class PostFactory extends Factory
             'SEO_description' => 'Desc-' . $this->faker->sentence(12),
             'title' => $this->faker->sentence(5),
             'content' => $this->faker->text(500),
-            'image' => 'image.jpg',
+            'image' => 'uploads/post/default.jpg',
             'category_id' => Category::get()->random()->id,
             'isPublick' => 1,
         ];

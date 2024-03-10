@@ -7,70 +7,27 @@
 <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom text-center">Основные категории услуг</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+
+        @foreach ($categories as $category)
+
         <div class="feature col">
             <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#collection" />
                 </svg>
             </div>
-            <h3 class="fs-2 text-body-emphasis">Категория 1</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                sentence and probably just keep going until we run out of words.</p>
-            <a href="cat1.html" class="icon-link">
-                Call to action
+            <h3 class="fs-2 text-body-emphasis">{{ $category->title }}</h3>
+            <p>{{ $category->content }}</p>
+            <a href="{{ route('category.show', $category->id) }}" class="icon-link">
+                Подробнее
                 <svg class="bi">
                     <use xlink:href="#chevron-right" />
                 </svg>
             </a>
         </div>
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#collection" />
-                </svg>
-            </div>
-            <h3 class="fs-2 text-body-emphasis">Категории 2</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                sentence and probably just keep going until we run out of words.</p>
-            <a href="cat2.html" class="icon-link">
-                Call to action
-                <svg class="bi">
-                    <use xlink:href="#chevron-right" />
-                </svg>
-            </a>
-        </div>
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#people-circle" />
-                </svg>
-            </div>
-            <h3 class="fs-2 text-body-emphasis">Категории 3</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                sentence and probably just keep going until we run out of words.</p>
-            <a href="cat3.html" class="icon-link">
-                Call to action
-                <svg class="bi">
-                    <use xlink:href="#chevron-right" />
-                </svg>
-            </a>
-        </div>
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#toggles2" />
-                </svg>
-            </div>
-            <h3 class="fs-2 text-body-emphasis">Категории 4</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                sentence and probably just keep going until we run out of words.</p>
-            <a href="cat4.html" class="icon-link">
-                Call to action
-                <svg class="bi">
-                    <use xlink:href="#chevron-right" />
-                </svg>
-            </a>
-        </div>
+
+        @endforeach
+
     </div>
 </div>
 
