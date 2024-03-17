@@ -9,16 +9,14 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Категории</th>
+                        <th scope="col">Предприятие</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($categories as $category)
                     <tr>
-                        <th scope="row">{{ $category->id }}</th>
-                        <td><a href="{{ route('admin.category.show', $category->id) }}">{{ $category->title }}</a></td>
+                        <th scope="row">{{ $contact->id }}</th>
+                        <td><a href="{{ route('admin.contact.show', $contact->id) }}">{{ $contact->name_firm }}</a></td>
                     </tr>
-                    @endforeach
                 </tbody>
             </table>
         </div>

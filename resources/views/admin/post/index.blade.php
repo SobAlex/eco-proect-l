@@ -2,30 +2,30 @@
 
 @section('content')
 
-<div class="mb-3">
-
-    <h1>Список услуг</h1>
-
-    <div></div><a href="{{ route('admin.post.create') }}">Создать</a>
-</div>
-<br>
-
-@foreach ($posts as $post)
-
-<h2>{{ $post->title  }}</h2>
-
-<img class="w-25" src="{{asset($post->image)}}" alt="{{ $post->image }}">
-
-<p>{{ $post->content }}</p>
-
-<a href="{{ route('admin.post.show', $post->id) }}">Подробнее</a>
-
-<br>
-<br>
-<br>
-
-@endforeach
-
+<div class="container mb-3">
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-success mb-3" href="{{ route('admin.post.create') }}">Создать</a>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Услуга</th>
+                        <th scope="col">Категория</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($posts as $post)
+                    <tr>
+                        <th scope="row">{{ $post->id }}</th>
+                        <td><a href="{{ route('admin.post.show', $post->id) }}">{{ $post->title }}</a></td>
+                        <td><a href="{{ route('admin.category.show', $post->category_id) }}">{{ $post->category->title }}</a></td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 @endsection

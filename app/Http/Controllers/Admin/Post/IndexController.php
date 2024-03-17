@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $posts = Post::orderBy('id', 'DESC')->get();
+        $posts = Post::all();
 
         return view('admin.post.index', compact('posts'));
     }

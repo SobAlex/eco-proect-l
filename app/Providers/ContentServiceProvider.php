@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\Post;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,6 +27,8 @@ class ContentServiceProvider extends ServiceProvider
     public $cat3MenuItem;
     public $cat4MenuItem;
 
+    public $contactHeader;
+
     public function register()
     {
         //
@@ -38,6 +41,8 @@ class ContentServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->catMenuItems = Category::all();
+
         $this->cat1MenuItem = Category::find(1);
         $this->cat2MenuItem = Category::find(2);
         $this->cat3MenuItem = Category::find(3);
@@ -48,19 +53,23 @@ class ContentServiceProvider extends ServiceProvider
         $this->postsCat3MenuItems = Post::where('category_id', $this->cat3MenuItem->id)->get();
         $this->postsCat4MenuItems = Post::where('category_id', $this->cat4MenuItem->id)->get();
 
-        $this->catMenuItems = Category::all();
+        $this->contactHeader = Contact::find(1);
 
         view()->composer('layouts.main', function ($view) {
             $view->with([
                 'catMenuItems' => $this->catMenuItems,
-                'postsCat1MenuItems' => $this->postsCat1MenuItems,
-                'postsCat2MenuItems' => $this->postsCat2MenuItems,
-                'postsCat3MenuItems' => $this->postsCat3MenuItems,
-                'postsCat4MenuItems' => $this->postsCat4MenuItems,
+
                 'cat1MenuItem' => $this->cat1MenuItem,
                 'cat2MenuItem' => $this->cat2MenuItem,
                 'cat3MenuItem' => $this->cat3MenuItem,
                 'cat4MenuItem' => $this->cat4MenuItem,
+
+                'postsCat1MenuItems' => $this->postsCat1MenuItems,
+                'postsCat2MenuItems' => $this->postsCat2MenuItems,
+                'postsCat3MenuItems' => $this->postsCat3MenuItems,
+                'postsCat4MenuItems' => $this->postsCat4MenuItems,
+
+                'contactHeader' => $this->contactHeader,
             ]);
         });
     }

@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $categories = Category::orderBy('id', 'DESC')->get();
+        $categories = Category::all();
 
         return view('admin.category.index', compact('categories'));
     }

@@ -2,16 +2,28 @@
 
 @section('content')
 
-<h1>Добро пожаловать, {{ $user->name }}!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-7">
 
-<ul class="nav flex-column">
-    <li class="nav-item">
-        <a class="nav-link active" href="{{ route('admin.category.index') }}">Список категорий услуг</a>
-    </li>
+            <h1 class="mb-3">Добро пожаловать, {{ $user->name }}!</h1>
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.post.index') }}">Список услуг</a>
-    </li>
-</ul>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ route('admin.category.index') }}">Список категорий услуг</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.post.index') }}">Список услуг</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.contact.index') }}">Контакты</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
 
 @endsection

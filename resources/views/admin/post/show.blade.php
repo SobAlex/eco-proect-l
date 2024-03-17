@@ -2,25 +2,31 @@
 
 @section('content')
 
-<div class="mb-3">
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-6">
 
-    <h2>{{ $post->title  }}</h2>
+            <h2>{{ $post->title  }}</h2>
 
-    <p>{{ $post->content }}</p>
+            <img class="w-50  mt-3 mb-3" src="{{asset($post->image)}}" alt="{{ $post->image }}">
 
-    <img class="w-50" src="{{asset($post->image)}}" alt="{{ $post->image }}">
+            <p>{{ $post->short_content }}</p>
 
-    <div>
-        <a href="{{ route('admin.post.edit', $post->id) }}">Редактировать</a>
+            <p>{{ $post->content }}</p>
 
-        <form action="{{ route('admin.post.delete', $post->id) }}" method="POST">
+            <div class="d-flex inline-block">
+                <a class="btn btn-success me-3" href="{{ route('admin.post.edit', $post->id) }}">Редактировать</a>
 
-            @csrf
-            @method('DELETE')
+                <form action="{{ route('admin.post.delete', $post->id) }}" method="POST">
 
-            <button type="submit">Удалить</button>
+                    @csrf
+                    @method('DELETE')
 
-        </form>
+                    <button class="btn btn-danger" type="submit">Удалить</button>
+
+                </form>
+            </div>
+        </div>
     </div>
 
 </div>
