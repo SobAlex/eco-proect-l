@@ -31,6 +31,7 @@ class UpdateRequest extends FormRequest
             'tel_work' => 'nullable',
             'tel_mob' => 'nullable',
             'email' => 'nullable',
+            'main_text' => 'required',
         ];
     }
 }

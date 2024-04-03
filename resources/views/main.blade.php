@@ -32,9 +32,7 @@
     <img class="d-block mx-auto mb-4" src="logo.png" alt="" width="72">
     <h2 class="pb-2 text-center">О компании</h2>
     <div class="col-lg-6 mx-auto">
-        <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
-            world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive
-            grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        <p>{{ $contact->main_text }}</p>
     </div>
 </div>
 

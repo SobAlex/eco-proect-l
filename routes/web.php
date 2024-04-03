@@ -1,8 +1,23 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // test route
 Route::get('test/{id}', [TestController::class, 'test']);
@@ -13,6 +28,7 @@ Route::get('/', App\Http\Controllers\MainController::class)->name('main.index');
 Route::get('/categories', App\Http\Controllers\Category\IndexController::class)->name('category.index');
 Route::get('/categories/{category}', App\Http\Controllers\Category\ShowController::class)->name('category.show');
 Route::get('/posts/{post}', App\Http\Controllers\Post\ShowController::class)->name('post.show');
+Route::get('/contact', App\Http\Controllers\Contact\IndexController::class)->name('contact.index');
 
 
 // Админка
@@ -41,3 +57,15 @@ Route::post('/admin/contacts/', App\Http\Controllers\Admin\Contact\StoreControll
 Route::get('/admin/contacts/{contact}/edit', App\Http\Controllers\Admin\Contact\EditController::class)->name('admin.contact.edit');
 Route::put('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\UpdateController::class)->name('admin.contact.update');
 Route::delete('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\DeleteController::class)->name('admin.contact.delete');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__ . '/auth.php';

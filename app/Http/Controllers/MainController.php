@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
@@ -17,6 +18,8 @@ class MainController extends Controller
 
         $categories = Category::all();
 
-        return view('main', compact('slide1', 'slide2', 'slide3', 'categories'));
+        $contact = Contact::find(1);
+
+        return view('main', compact('slide1', 'slide2', 'slide3', 'categories', 'contact'));
     }
 }
