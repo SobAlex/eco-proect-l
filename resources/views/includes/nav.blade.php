@@ -92,7 +92,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Контакты</a>
+                <a href="{{ route('contact.index') }}">Контакты</a>
             </li>
 
             <li>

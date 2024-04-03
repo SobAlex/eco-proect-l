@@ -17,11 +17,13 @@ return new class extends Migration
             $table->string('logo')->nullable();
             $table->string('name_firm')->nullable();
             $table->string('slogan')->nullable();
-            $table->string('adress')->nullable();;
-            $table->string('work_time')->nullable();;
-            $table->string('tel_work')->nullable();;
-            $table->string('tel_mob')->nullable();;
-            $table->string('email')->nullable();;
+            $table->string('adress')->nullable();
+            $table->string('work_time')->nullable();
+            $table->string('tel_work')->nullable();
+            $table->string('tel_mob')->nullable();
+            $table->string('email')->nullable();
+
+            $table->text('main_text');
 
             $table->timestamps();
             $table->softDeletes();

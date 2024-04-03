@@ -13,6 +13,7 @@ Route::get('/', App\Http\Controllers\MainController::class)->name('main.index');
 Route::get('/categories', App\Http\Controllers\Category\IndexController::class)->name('category.index');
 Route::get('/categories/{category}', App\Http\Controllers\Category\ShowController::class)->name('category.show');
 Route::get('/posts/{post}', App\Http\Controllers\Post\ShowController::class)->name('post.show');
+Route::get('/contact', App\Http\Controllers\Contact\IndexController::class)->name('contact.index');
 
 
 // Админка
