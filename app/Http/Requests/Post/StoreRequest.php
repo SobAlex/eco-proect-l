@@ -24,6 +24,7 @@ class StoreRequest extends FormRequest
         return [
             'SEO_title' => 'nullable',
             'SEO_description' => 'nullable',
+            'slug' => 'string|required',
             'title' => 'required',
             'short_content' => 'required',
             'content' => 'required',

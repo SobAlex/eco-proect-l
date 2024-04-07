@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('SEO_title')->nullable();
             $table->string('SEO_description')->nullable();
+            $table->string('slug')->nullable();
 
             $table->string('title');
             $table->text('short_content');

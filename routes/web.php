@@ -1,3 +1,4 @@
+-- Active: 1712498109233@@127.0.0.1@3306@eco-proect
 <?php
 
 use App\Http\Controllers\TestController;
@@ -42,3 +43,7 @@ Route::post('/admin/contacts/', App\Http\Controllers\Admin\Contact\StoreControll
 Route::get('/admin/contacts/{contact}/edit', App\Http\Controllers\Admin\Contact\EditController::class)->name('admin.contact.edit');
 Route::put('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\UpdateController::class)->name('admin.contact.update');
 Route::delete('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\DeleteController::class)->name('admin.contact.delete');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

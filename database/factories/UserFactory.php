@@ -24,7 +24,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => 'Test Name',
+            'name' => 'Максим',
             'email' => 'test@test.com',
             'password' => 123456789,
             'email_verified_at' => now(),

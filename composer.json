@@ -11,6 +11,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/telescope": "^4.17",
         "laravel/tinker": "^2.8",
+        "laravel/ui": "^4.5",
         "staudenmeir/eloquent-eager-limit": "^1.0"
     },
     "require-dev": {
