@@ -10,10 +10,8 @@
 
         @foreach ($categories as $category)
 
-        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em">
-                <use xlink:href="#collection" />
-            </svg>
+        <div class="col">
+            <img src="{{ $category->image }}" class="fit-image" alt="{{ $category->title }}">
         </div>
 
         <div class="feature col">
