@@ -57,8 +57,7 @@
                 <p><b>Текст на главной странице</b></p>
 
                 <div class=" mb-3">
-                    <!-- <label for="main_text" class="form-label">Текст на главной странице</label><br> -->
-                    <textarea name="main_text" id="main_text" cols="100" rows="10">Текст на главной странице</textarea>
+                    <textarea name="main_text" id="main_text" cols="100" rows="10">{{ $contact->main_text }}</textarea>
                 </div>
 
                 <div class="mb-3">

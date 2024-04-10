@@ -12,6 +12,7 @@ nav {
 }
 .menu {
     display: block;
+    padding-left: 0;
 }
 .menu li {
     display: inline-block;

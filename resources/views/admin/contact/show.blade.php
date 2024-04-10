@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="col-6">
-            <p>текст на главной</p>
+            <p>{{ $contact->main_text }}</p>
         </div>
     </div>
 </div>

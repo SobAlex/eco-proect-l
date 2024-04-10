@@ -20,7 +20,7 @@ class UpdateController extends Controller
         $contact = Contact::find($id);
 
         $path = 'uploads/contact/';
-        $filename = 'default.jpg';
+        $filename = 'logo.png';
 
         if ($request->hasFile('logo')) {
 
@@ -45,6 +45,7 @@ class UpdateController extends Controller
             'tel_work' => $request->tel_work,
             'tel_mob' => $request->tel_work,
             'email' => $request->email,
+            'main_text' => $request->main_text,
         ]);
 
         return redirect('/admin/contacts/' . $contact->id);

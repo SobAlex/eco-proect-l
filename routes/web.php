@@ -16,8 +16,6 @@ Route::get('/categories/{category}', App\Http\Controllers\Category\ShowControlle
 Route::get('/posts/{post}', App\Http\Controllers\Post\ShowController::class)->name('post.show');
 Route::get('/contact', App\Http\Controllers\Contact\IndexController::class)->name('contact.index');
 
-Auth::routes();
-
 Route::group(['middleware' => ['auth', 'isadmin']], function () {
 
     // Админка
@@ -47,3 +45,5 @@ Route::group(['middleware' => ['auth', 'isadmin']], function () {
     Route::put('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\UpdateController::class)->name('admin.contact.update');
     Route::delete('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\DeleteController::class)->name('admin.contact.delete');
 });
+
+Auth::routes();
