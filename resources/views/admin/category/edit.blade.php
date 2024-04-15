@@ -23,6 +23,11 @@
                     <input type="text" name="SEO_description" class="form-control" id="SEO-description" value="{{ $category->SEO_description }}">
                 </div>
 
+                <div class="mb-3">
+                    <label for="slug" class="form-label">slug</label>
+                    <input type="text" name="slug" class="form-control" id="slug" value="{{ $category->SEO_description }}">
+                </div>
+
                 <div class=" mb-3">
                     <label for="title" class="form-label">Заголовок</label>
                     <input type="text" name="title" class="form-control" id="title" value="{{ $category->title }}">

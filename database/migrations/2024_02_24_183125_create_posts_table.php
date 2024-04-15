@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('SEO_description')->nullable();
             $table->string('slug')->nullable();
 
-            $table->string('title');
-            $table->text('short_content');
-            $table->text('content');
+            $table->string('title')->nullable();;
+            $table->text('short_content')->nullable();;
+            $table->text('content')->nullable();;
             $table->string('image')->nullable();
 
             $table->unsignedBigInteger('category_id')->nullable();

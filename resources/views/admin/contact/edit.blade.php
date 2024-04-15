@@ -15,7 +15,7 @@
                 <p><b>Контактные данные</b></p>
 
                 <div class="mb-3">
-                    <label for="logo" class="form-label">Логотип</label>
+                    <label for="logo" class="form-label">Логотип (файл должен называться logo.png)</label>
                     <input type="file" name="logo" class="form-control" id="logo">
                 </div>
 

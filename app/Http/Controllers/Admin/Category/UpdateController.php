@@ -12,9 +12,6 @@ class UpdateController extends Controller
 
     public function __invoke(UpdateRequest $request, $id)
     {
-
-        dd($request);
-
         $data = $request->validated();
 
         $category = Category::find($id);
@@ -40,7 +37,9 @@ class UpdateController extends Controller
         $category->update([
             'SEO_title' => $request->SEO_title,
             'SEO_description' => $request->SEO_description,
+            'slug' => $request->slug,
             'title' => $request->title,
+            'short_content' => $request->short_content,
             'content' => $request->content,
             'image' => $path . $filename,
         ]);

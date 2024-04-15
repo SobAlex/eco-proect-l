@@ -13,13 +13,18 @@
                 @csrf
 
                 <div class="mb-3">
-                    <label for="SEO-title" class="form-label">Title</label>
+                    <label for="SEO-title" class="form-label">SEO title</label>
                     <input type="text" name="SEO_title" class="form-control" id="SEO-title">
                 </div>
 
                 <div class="mb-3">
-                    <label for="SEO-descriptin" class="form-label">Descriptin</label>
+                    <label for="SEO-descriptin" class="form-label">SEO descriptin</label>
                     <input type="text" name="SEO_description" class="form-control" id="SEO-descriptin">
+                </div>
+
+                <div class="mb-3">
+                    <label for="slug" class="form-label">slug</label>
+                    <input type="text" name="slug" class="form-control" id="slug">
                 </div>
 
                 <div class="mb-3">

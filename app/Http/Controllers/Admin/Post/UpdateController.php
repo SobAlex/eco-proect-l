@@ -36,7 +36,9 @@ class UpdateController extends Controller
         $post->update([
             'SEO_title' => $request->SEO_title,
             'SEO_description' => $request->SEO_description,
+            'slug' => $request->slug,
             'title' => $request->title,
+            'short_content' => $request->short_content,
             'content' => $request->content,
             'image' => $path . $filename,
             'category_id' => $request->category_id,

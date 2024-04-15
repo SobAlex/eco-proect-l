@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-6">
             <div class="d-flex">
-                <img class="me-3" src="{{asset($contact->logo)}}" alt="{{ $contact->logo }}" width="50">
+                <img src="{{ Vite::asset('resources/img/logo.png')}}" alt="Logo" width="70">
                 <h2>{{ $contact->name_firm }}</h2>
             </div>
 
