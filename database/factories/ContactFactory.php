@@ -18,7 +18,7 @@ class ContactFactory extends Factory
     public function definition(): array
     {
         return [
-            'logo' => 'uploads/contact/logo.png',
+            'logo' => 'resources/img/logo.png',
             'name_firm' => 'ООО "Природные ресурсы"',
             'slogan' => 'Санитарная и экологическая безопасность в области градостроительной деятельности,охраны труда и эксплуатации действующих объектов.',
             'adress' => 'г. Екатеринбург, ул. Куйбышева, 55, оф. 202',

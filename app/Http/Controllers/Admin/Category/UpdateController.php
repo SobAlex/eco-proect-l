@@ -13,6 +13,8 @@ class UpdateController extends Controller
     public function __invoke(UpdateRequest $request, $id)
     {
 
+        dd($request);
+
         $data = $request->validated();
 
         $category = Category::find($id);

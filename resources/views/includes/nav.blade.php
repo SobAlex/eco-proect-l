@@ -1,7 +1,7 @@
 <div class="container row flex-nowrap justify-content-between contactHeaders">
     <div class="col-1 pt-1">
         <a href="{{ route('main.index') }}">
-            <img src="{{ $contactHeader->logo }}" alt="Logo" width="70">
+            <img src="{{ Vite::asset('resources/img/logo.png')}}" alt="Logo" width="70">
         </a>
     </div>
     <div class="col-4">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-1 d-flex justify-content-end">
-        <img src="{{ asset('build/assets/icons8-whatsapp-48.png') }}" alt="whatsapp_icon" width="45" height="45">
+        <img src="{{ Vite::asset('resources/img/icons8-whatsapp-48.png')}}" alt="whatsapp_icon" width="45" height="45">
     </div>
 </div>
 <div class="container nav-scroller">

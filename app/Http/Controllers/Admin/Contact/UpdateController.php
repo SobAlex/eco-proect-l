@@ -19,7 +19,7 @@ class UpdateController extends Controller
 
         $contact = Contact::find($id);
 
-        $path = 'uploads/contact/';
+        $path = 'resources/img/';
         $filename = 'logo.png';
 
         if ($request->hasFile('logo')) {

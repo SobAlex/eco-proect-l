@@ -72,11 +72,20 @@
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
         <div class="col-lg-6">
-            <h2 class="pb-2 text-center">Здесь можно разместить карту и контакты
-            </h2>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <h2 class="mb-4">{{ $contact->name_firm }}</h2>
+
+            <p>{{ $contact->slogan }}</p>
+
+            <p>Адрес: {{ $contact->adress }}</p>
+
+            <p>График работы: {{ $contact->work_time }}</p>
+
+            <p>Раб. тел.: <a href="tel:{{ $contact->tel_work }}">{{ $contact->tel_work }}</a></p>
+
+            <p>Моб. тел.: <a href="tel:{{ $contact->tel_mob }}">{{ $contact->tel_mob }}</a></p>
+
+            <p>E-mail: <a href="mailto:presurseco@mail.ru">{{ $contact->email }}</a></p>
+
         </div>
 
         <div class="col-lg-6">
