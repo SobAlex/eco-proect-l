@@ -16,10 +16,12 @@ class MainController extends Controller
         $slide2 = Post::find(2);
         $slide3 = Post::find(3);
 
+        $slides = [$slide1, $slide2, $slide3];
+
         $categories = Category::all();
 
         $contact = Contact::find(1);
 
-        return view('main', compact('slide1', 'slide2', 'slide3', 'categories', 'contact'));
+        return view('main', compact('slides', 'categories', 'contact'));
     }
 }
