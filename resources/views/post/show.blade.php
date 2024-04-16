@@ -1,4 +1,7 @@
-@extends('layouts.main')
+@extends('layouts.main', [
+'title' => "$post->SEO_title",
+'description' => "$post->SEO_description",
+])
 
 @section('content')
 
