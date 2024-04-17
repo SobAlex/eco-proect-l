@@ -12,13 +12,13 @@
     <p>{{ $post->content }}</p>
     <img src="{{ $post->image }}" alt="{{ $post->image }}">
     <br>
-    <a href="{{ route('post.show', $post->id) }}">Подробнее</a>
+    <a href="{{ route('post.show', $post->slug) }}">Подробнее</a>
     <br>
     <a href="{{ route('post.create') }}">Создать</a>
     <br>
-    <a href="{{ route('post.edit', $post->id) }}">Редактировать</a>
+    <a href="{{ route('post.edit', $post->slug) }}">Редактировать</a>
 
-    <form action="{{ route('post.delete', $post->id) }}" method="POST">
+    <form action="{{ route('post.delete', $post->slug) }}" method="POST">
 
         @csrf
         @method('DELETE')

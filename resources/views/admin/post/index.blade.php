@@ -18,8 +18,8 @@
                     @foreach ($posts as $post)
                     <tr>
                         <th scope="row">{{ $post->id }}</th>
-                        <td><a href="{{ route('admin.post.show', $post->id) }}">{{ $post->title }}</a></td>
-                        <td><a href="{{ route('admin.category.show', $post->category_id) }}">{{ $post->category->title }}</a></td>
+                        <td><a href="{{ route('admin.post.show', $post->slug) }}">{{ $post->title }}</a></td>
+                        <td><a href="{{ route('admin.category.show', $post->category->slug) }}">{{ $post->category->title }}</a></td>
                     </tr>
                     @endforeach
                 </tbody>

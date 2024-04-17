@@ -14,7 +14,7 @@
             <p>{{ $category->content }}</p>
 
             <div class="d-flex inline-block">
-                <a class="btn btn-success me-3" href="{{ route('admin.category.edit', $category->id) }}">Редактировать</a>
+                <a class="btn btn-success me-3" href="{{ route('admin.category.edit', $category->slug) }}">Редактировать</a>
             </div>
         </div>
     </div>

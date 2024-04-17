@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\File;
 class UpdateController extends Controller
 {
 
-    public function __invoke(UpdateRequest $request, $id)
+    public function __invoke(UpdateRequest $request, $slug)
     {
         $data = $request->validated();
 
-        $category = Category::find($id);
+        $category = Category::where('slug', $slug)->first();
 
         $path = 'uploads/category/';
         $filename = 'default.jpg';
@@ -44,6 +44,6 @@ class UpdateController extends Controller
             'image' => $path . $filename,
         ]);
 
-        return redirect('/admin/categories/' . $category->id);
+        return redirect('/admin/categories/' . $category->slug);
     }
 }

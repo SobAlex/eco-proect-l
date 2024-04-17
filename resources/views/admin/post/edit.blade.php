@@ -7,7 +7,7 @@
         <div class="col-7">
             <h1>Редактировать услугу</h1>
 
-            <form action="{{ route('admin.post.update', $post->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.post.update', $post->slug) }}" method="POST" enctype="multipart/form-data">
 
                 @csrf
 

@@ -29,7 +29,7 @@
             </div>
             <h3 class="fs-2 text-body-emphasis">{{ $post->title }}</h3>
             <p>{{ $post->short_content }}</p>
-            <a href="{{ route('post.show', $post->id) }}">
+            <a href="{{ route('post.show', $post->slug) }}">
                 Подробнее
             </a>
         </div>

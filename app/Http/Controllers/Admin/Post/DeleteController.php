@@ -8,8 +8,9 @@ use App\Models\Post;
 class DeleteController extends Controller
 {
 
-    public function __invoke(Post $post)
+    public function __invoke($slug)
     {
+        $post = Post::where('slug', $slug)->first();
         $post->delete();
 
         return redirect()->route('admin.post.index');

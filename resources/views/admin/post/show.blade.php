@@ -15,9 +15,9 @@
             <p>{{ $post->content }}</p>
 
             <div class="d-flex inline-block">
-                <a class="btn btn-success me-3" href="{{ route('admin.post.edit', $post->id) }}">Редактировать</a>
+                <a class="btn btn-success me-3" href="{{ route('admin.post.edit', $post->slug) }}">Редактировать</a>
 
-                <form action="{{ route('admin.post.delete', $post->id) }}" method="POST">
+                <form action="{{ route('admin.post.delete', $post->slug) }}" method="POST">
 
                     @csrf
                     @method('DELETE')

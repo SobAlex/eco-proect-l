@@ -7,7 +7,7 @@
         <div class="col-7">
             <h1 class="mb-4">Редактировать категорию</h1>
 
-            <form action="{{ route('admin.category.update', $category->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.category.update', $category->slug) }}" method="POST" enctype="multipart/form-data">
 
                 @csrf
 
@@ -25,7 +25,7 @@
 
                 <div class="mb-3">
                     <label for="slug" class="form-label">slug</label>
-                    <input type="text" name="slug" class="form-control" id="slug" value="{{ $category->SEO_description }}">
+                    <input type="text" name="slug" class="form-control" id="slug" value="{{ $category->slug }}">
                 </div>
 
                 <div class=" mb-3">

@@ -15,7 +15,7 @@
         </div>
 
         <div class="feature col">
-            <h3><a href="{{ route('category.show', $category->id) }}">{{ $category->title }}</a></h3>
+            <h3><a href="{{ route('category.show', $category->slug) }}">{{ $category->title }}</a></h3>
             <p>{{ $category->short_content }}</p>
         </div>
 

@@ -43,11 +43,11 @@
                         <ul class="sub-menu">
 
                             <li>
-                                <a href="{{ route('category.show', $cat1MenuItem->id) }}">{{$cat1MenuItem->title}}</a>
+                                <a href="{{ route('category.show', $cat1MenuItem->slug) }}">{{$cat1MenuItem->title}}</a>
                                 <ul>
                                     @foreach ($postsCat1MenuItems as $postsCat1MenuItem)
 
-                                    <li><a href="{{ route('post.show', $postsCat1MenuItem->id) }}">{{ $postsCat1MenuItem->title }}</a></li>
+                                    <li><a href="{{ route('post.show', $postsCat1MenuItem->slug) }}">{{ $postsCat1MenuItem->title }}</a></li>
 
                                     @endforeach
 
@@ -55,11 +55,11 @@
                             </li>
 
                             <li>
-                                <a href="{{ route('category.show', $cat2MenuItem->id) }}">{{$cat2MenuItem->title}}</a>
+                                <a href="{{ route('category.show', $cat2MenuItem->slug) }}">{{$cat2MenuItem->title}}</a>
                                 <ul>
                                     @foreach ($postsCat2MenuItems as $postsCat2MenuItem)
 
-                                    <li><a href="{{ route('post.show', $postsCat2MenuItem->id) }}">{{ $postsCat2MenuItem->title }}</a></li>
+                                    <li><a href="{{ route('post.show', $postsCat2MenuItem->slug) }}">{{ $postsCat2MenuItem->title }}</a></li>
 
                                     @endforeach
 
@@ -67,11 +67,11 @@
                             </li>
 
                             <li>
-                                <a href="{{ route('category.show', $cat3MenuItem->id) }}">{{$cat3MenuItem->title}}</a>
+                                <a href="{{ route('category.show', $cat3MenuItem->slug) }}">{{$cat3MenuItem->title}}</a>
                                 <ul>
                                     @foreach ($postsCat3MenuItems as $postsCat3MenuItem)
 
-                                    <li><a href="{{ route('post.show', $postsCat3MenuItem->id) }}">{{ $postsCat3MenuItem->title }}</a></li>
+                                    <li><a href="{{ route('post.show', $postsCat3MenuItem->slug) }}">{{ $postsCat3MenuItem->title }}</a></li>
 
                                     @endforeach
 
@@ -79,11 +79,11 @@
                             </li>
 
                             <li>
-                                <a href="{{ route('category.show', $cat4MenuItem->id) }}">{{ $cat4MenuItem->title }}</a>
+                                <a href="{{ route('category.show', $cat4MenuItem->slug) }}">{{ $cat4MenuItem->title }}</a>
                                 <ul>
                                     @foreach ($postsCat4MenuItems as $postsCat4MenuItem)
 
-                                    <li><a href="{{ route('post.show', $postsCat4MenuItem->id) }}">{{ $postsCat4MenuItem->title }}</a></li>
+                                    <li><a href="{{ route('post.show', $postsCat4MenuItem->slug) }}">{{ $postsCat4MenuItem->title }}</a></li>
 
                                     @endforeach
 

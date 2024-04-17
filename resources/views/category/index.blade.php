@@ -17,7 +17,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category1->title }}</h2>
                     <p class="text-body-secondary">{{ $category1->short_content }}</p>
-                    <a href="{{ route('category.show', $category1->id) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category1->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
                 </div>
 
                 <div class="col">
@@ -67,7 +67,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category2->title }}</h2>
                     <p class="text-body-secondary">{{ $category2->short_content }}</p>
-                    <a href="{{ route('category.show', $category2->id) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category2->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
                 </div>
 
             </div>
@@ -78,7 +78,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category3->title }}</h2>
                     <p class="text-body-secondary">{{ $category3->short_content }}</p>
-                    <a href="{{ route('category.show', $category3->id) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category3->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
                 </div>
 
                 <div class="col">
@@ -128,7 +128,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category4->title }}</h2>
                     <p class="text-body-secondary">{{ $category4->short_content }}</p>
-                    <a href="{{ route('category.show', $category4->id) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category4->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
                 </div>
 
 

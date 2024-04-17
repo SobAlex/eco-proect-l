@@ -8,8 +8,10 @@ use App\Models\Category;
 class DeleteController extends Controller
 {
 
-    public function __invoke(Category $category)
+    public function __invoke($slug)
     {
+        $category = Category::where('slug', $slug)->first();
+
         $category->delete();
 
         return redirect()->route('admin.category.index');
