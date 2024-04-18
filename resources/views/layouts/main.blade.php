@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'Тайтл кароч' }}</title>
-    <meta name="description" content="{{ $description ?? 'Описание кароч' }}" />
+    <title>{{ $title ?? 'Санитарная и экологическая безопасность' }}</title>
+    <meta name="description" content="{{ $description ?? 'Санитарная и экологическая безопасность - Природные ресурсы' }}" />
     @vite(["resources/css/app.css", "resources/js/app.js"])
 </head>
 

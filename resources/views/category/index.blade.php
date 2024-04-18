@@ -31,7 +31,7 @@
                                     <use xlink:href="#collection" />
                                 </svg>
                             </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">{{$postCat1->title}}</h4>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis"><a href="{{ route('post.show', $postCat1->slug) }}">{{$postCat1->title}}</a></h4>
                             <p class="text-body-secondary">{{$postCat1->short_content}}</p>
                         </div>
 
@@ -56,7 +56,7 @@
                                     <use xlink:href="#collection" />
                                 </svg>
                             </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">{{$postCat2->title}}</h4>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis"><a href="{{ route('post.show', $postCat2->slug) }}">{{$postCat2->title}}</a></h4>
                             <p class="text-body-secondary">{{$postCat2->short_content}}</p>
                         </div>
 
@@ -92,7 +92,7 @@
                                     <use xlink:href="#collection" />
                                 </svg>
                             </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">{{$postCat3->title}}</h4>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis"><a href="{{ route('post.show', $postCat3->slug) }}">{{$postCat3->title}}</a></h4>
                             <p class="text-body-secondary">{{$postCat3->short_content}}</p>
                         </div>
 
@@ -117,7 +117,7 @@
                                     <use xlink:href="#collection" />
                                 </svg>
                             </div>
-                            <h4 class="fw-semibold mb-0 text-body-emphasis">{{$postCat4->title}}</h4>
+                            <h4 class="fw-semibold mb-0 text-body-emphasis"><a href="{{ route('post.show', $postCat4->slug) }}">{{$postCat4->title}}</a></h4>
                             <p class="text-body-secondary">{{$postCat4->short_content}}</p>
                         </div>
 
