@@ -1,12 +1,12 @@
 <footer class="container py-5">
     <div class="row">
         <div class="col-12 col-md">
-            <p>ООО "Природные ресурсы"</p>
+            <p><b>ООО "Природные ресурсы"</b></p>
             <small class="d-block mb-3 text-body-secondary">&copy; <?php echo date('Y'); ?></small>
         </div>
 
         <div class="col-6 col-md">
-            <h5>О Компании</h5>
+            <p><b>О Компании</b></p>
             <ul class="list-unstyled text-small">
                 <li><a class="link-secondary text-decoration-none" href="#">Сертификаты</a></li>
                 <li><a class="link-secondary text-decoration-none" href="#">Отзывы</a></li>
@@ -16,7 +16,7 @@
         </div>
 
         <div class="col-6 col-md">
-            <h5>Услуги</h5>
+            <p><b>Услуги</b></p>
             <ul class="list-unstyled text-small">
 
                 <li><a class="link-secondary text-decoration-none" href="{{ route('category.show', $cat1MenuItem->slug) }}">{{ $cat1MenuItem->title }}</a></li>

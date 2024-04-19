@@ -5,7 +5,7 @@
 @include('includes.slider')
 
 <div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 text-center">Основные категории услуг</h2>
+    <h1 class="pb-2 text-center">Санитарная и экологическая безопасность</h1>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
 
         @foreach ($categories as $category)
@@ -15,7 +15,7 @@
         </div>
 
         <div class="feature col">
-            <h3><a href="{{ route('category.show', $category->slug) }}">{{ $category->title }}</a></h3>
+            <h2><a href="{{ route('category.show', $category->slug) }}">{{ $category->title }}</a></h2>
             <p>{{ $category->short_content }}</p>
         </div>
 
@@ -28,7 +28,7 @@
 
 <div class="px-4 py-5 text-center border-top">
     <img class="d-block mx-auto mb-4" src="logo.png" alt="" width="72">
-    <h2 class="pb-2 text-center">О компании</h2>
+    <p class="pb-2 text-center"><b>О компании</b></p>
     <div class="col-lg-6 mx-auto">
         <p>{{ $contact->main_text }}</p>
     </div>
@@ -38,31 +38,14 @@
     <div class="row align-items-center g-lg-5 py-5">
 
         <div class="col-lg-6 text-center text-lg-start">
-            <h2 class="pb-2 text-center">Оставить заявку</h2>
+            <p class="pb-2 text-center"><b>Оставить заявку</b></p>
             <p>Below is an example form built entirely with Bootstrap’s form controls.
                 Each required form group has a validation state that can be triggered by attempting to submit
                 the form without completing it.</p>
         </div>
 
-        <div class="mx-auto col-lg-6">
-            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-                <hr class="my-4">
-                <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
-            </form>
+        <div class="col-lg-6">
+            @include('includes.form')
         </div>
 
     </div>
@@ -72,7 +55,7 @@
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
         <div class="col-lg-6">
-            <h2 class="mb-4">{{ $contact->name_firm }}</h2>
+            <p class="mb-4"><b>{{ $contact->name_firm }}</b></p>
 
             <p>{{ $contact->slogan }}</p>
 

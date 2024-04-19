@@ -12,7 +12,7 @@
             <div class="carousel-item active">
                 <img src="{{ $slide->image }}" class="d-block w-100 h-100" alt="{{$slide->image}}">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ $slide->title }}</h5>
+                    <p>{{ $slide->title }}</p>
                     <p>{{ $slide->content }}</p>
                 </div>
             </div>
