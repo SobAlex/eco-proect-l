@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\TestController;
 use Illuminate\Auth\Middleware\Authenticate;
+use App\Http\Controllers\ContactUsFormController;
 use Illuminate\Support\Facades\Route;
 
+Route::post('/message', [ContactUsFormController::class, 'ContactUsForm'])->name('message.store');
 
 // test route
-Route::get('test/{id}', [TestController::class, 'test']);
+Route::get('/test/{id}', [TestController::class, 'test']);
 
 
 // Видимая часть

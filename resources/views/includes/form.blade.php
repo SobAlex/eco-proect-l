@@ -1,26 +1,53 @@
-<form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+<form method="post" action="{{ route('message.store') }}">
 
-    <div class="form-floating mb-3">
-        <label for="name">Имя</label>
-        <input type="text" name="name" class="form-control" id="name">
+    @csrf
+    <!-- @method('PUT') -->
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control {{ $errors->has('name') ? 'error' : '' }}" name="name" id="name">
+        <!-- Error -->
+        @if ($errors->has('name'))
+        <div class="error">
+            {{ $errors->first('name') }}
+        </div>
+        @endif
     </div>
-
-    <div class="form-floating mb-3">
-        <label for="phone">Телефон</label>
-        <input type="text" name="phone" class="form-control" id="phone">
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control {{ $errors->has('email') ? 'error' : '' }}" name="email" id="email">
+        @if ($errors->has('email'))
+        <div class="error">
+            {{ $errors->first('email') }}
+        </div>
+        @endif
     </div>
-
-    <div class="form-floating mb-3">
-        <label for="floatingInput">Email</label>
-        <input type="email" name="email" class="form-control" id="email">
+    <div class="form-group">
+        <label>Phone</label>
+        <input type="text" class="form-control {{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone">
+        @if ($errors->has('phone'))
+        <div class="error">
+            {{ $errors->first('phone') }}
+        </div>
+        @endif
     </div>
-
-    <div class="form-floating">
-        <label for="floatingTextarea">Сообщение</label>
-        <textarea class="form-control" id="floatingTextarea"></textarea>
+    <div class="form-group">
+        <label>Subject</label>
+        <input type="text" class="form-control {{ $errors->has('subject') ? 'error' : '' }}" name="subject" id="subject">
+        @if ($errors->has('subject'))
+        <div class="error">
+            {{ $errors->first('subject') }}
+        </div>
+        @endif
     </div>
-
-    <br>
-
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Отправить заявку</button>
+    <div class="form-group">
+        <label>Message</label>
+        <textarea class="form-control {{ $errors->has('message') ? 'error' : '' }}" name="message" id="message" rows="4"></textarea>
+        @if ($errors->has('message'))
+        <div class="error">
+            {{ $errors->first('message') }}
+        </div>
+        @endif
+    </div>
+    <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
 </form>
