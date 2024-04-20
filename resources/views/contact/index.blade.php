@@ -4,7 +4,7 @@
 
 <div class="container mb-3">
     <div class="row">
-        <div class="col-6">
+        <div class="col-6 p-3">
 
             <h2 class="mb-4">{{ $contact->name_firm }}</h2>
 

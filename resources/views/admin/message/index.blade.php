@@ -5,24 +5,32 @@
 <div class="container mb-3">
     <div class="row">
         <div class="col-lg-8">
-            <h1>Категории услуг</h1>
+            <h1>Заявки</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Категория</th>
+                        <th>Номер заявки</th>
+                        <th>Имя</th>
+                        <th>Email</th>
+                        <th>Тема</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($categories as $category)
+
+                    @foreach ($messages as $message)
+
                     <tr>
-                        <th scope="col">{{ $category->id }}</th>
-                        <td scope="col"><a href="{{ route('admin.category.show', $category->slug) }}">{{ $category->title }}</a></td>
+                        <td><a href="{{ route('admin.message.show', $message->id) }}">{{ $message->id }}</a></td>
+                        <td>{{ $message->name }}</td>
+                        <td>{{ $message->email }}</td>
+                        <td>{{ $message->subject }}</td>
                     </tr>
+
                     @endforeach
                 </tbody>
             </table>
         </div>
+
         <div class="col-lg-4">
             @include('includes.admin-nav-content')
         </div>

@@ -1,11 +1,5 @@
-/* .container {
-    max-width: 500px;
-    margin: 50px auto;
-    text-align: left;
-    font-family: sans-serif;
-} */
 form {
-    border: 1px solid #1a33ff;
+    /* border: 1px solid #1a33ff; */
     background: #ecf5fc;
     padding: 40px 50px 45px;
 }

@@ -4,15 +4,13 @@
 
 <div class="container mb-3">
     <div class="row">
-        <h1 class="mb-4">Редактировать</h1>
-        <div class="col-6">
+        <h1 class="mb-4">Редактировать предприятие</h1>
+        <div class="col-lg-8">
             <form action="{{ route('admin.contact.update', $contact->id) }}" method="POST" enctype="multipart/form-data">
 
                 @csrf
 
                 @method('PUT')
-
-                <p><b>Контактные данные</b></p>
 
                 <div class="mb-3">
                     <label for="logo" class="form-label">Логотип (файл должен называться logo.png)</label>
@@ -54,7 +52,7 @@
                     <input type="email" name="email" class="form-control" id="email" value="{{ $contact->email }}">
                 </div>
 
-                <p><b>Текст на главной странице</b></p>
+                <p>Текст на главной странице</p>
 
                 <div class=" mb-3">
                     <textarea name="main_text" id="main_text" cols="100" rows="10">{{ $contact->main_text }}</textarea>
@@ -64,6 +62,9 @@
                     <button class="btn btn-success" type="submit">Обновить</button>
                 </div>
             </form>
+        </div>
+        <div class="col-lg-4">
+            @include('includes.admin-nav-content')
         </div>
     </div>
 </div>

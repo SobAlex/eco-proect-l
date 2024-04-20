@@ -4,7 +4,8 @@
 
 <div class="container mb-3">
     <div class="row">
-        <div class="col">
+        <div class="col-lg-8">
+            <h1>Мои предприятия</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -19,6 +20,9 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-4">
+            @include('includes.admin-nav-content')
         </div>
     </div>
 </div>

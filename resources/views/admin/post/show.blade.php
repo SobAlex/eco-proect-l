@@ -4,7 +4,7 @@
 
 <div class="container mb-3">
     <div class="row">
-        <div class="col-6">
+        <div class="col-lg-8">
 
             <h2>{{ $post->title  }}</h2>
 
@@ -26,6 +26,9 @@
 
                 </form>
             </div>
+        </div>
+        <div class="col-lg-4">
+            @include('includes.admin-nav-content')
         </div>
     </div>
 

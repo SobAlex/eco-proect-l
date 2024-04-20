@@ -36,7 +36,7 @@ class ContactUsFormController extends Controller
 
         // flash('Заявка успешно отправлена! Мы скоро свяжемся с вами.');
 
-        // return redirect('/');
+        // return view('/mail');
         return back()->with('success', 'Заявка успешно отправлена! Мы скоро свяжемся с вами.');
         // return back();
     }

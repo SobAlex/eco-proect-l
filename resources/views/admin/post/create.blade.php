@@ -4,7 +4,7 @@
 
 <div class="container mb-3">
     <div class="row">
-        <div class="col-7">
+        <div class="col-lg-8">
 
             <h1 class="mb-3">Создать услугу</h1>
 
@@ -71,6 +71,9 @@
                 @endif
 
             </form>
+        </div>
+        <div class="col-lg-4">
+            @include('includes.admin-nav-content')
         </div>
     </div>
 

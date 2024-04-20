@@ -4,8 +4,12 @@
 
 <div class="container mb-3">
     <div class="row">
-        <div class="col">
-            <a class="btn btn-success mb-3" href="{{ route('admin.post.create') }}">Создать</a>
+        <div class="col-lg-8">
+            <div class="d-flex align-items-center justify-content-between">
+                <h1>Список услуг</h1>
+                <a class="btn btn-success" href="{{ route('admin.post.create') }}">Создать услугу</a>
+            </div>
+
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -24,6 +28,9 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+        <div class="col-lg-4">
+            @include('includes.admin-nav-content')
         </div>
     </div>
 </div>

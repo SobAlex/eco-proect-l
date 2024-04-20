@@ -18,7 +18,7 @@
         <div class="col-md-7">
 
             <article class="blog-post">
-                <p>{{ $post->content }}</p>
+                <p class="p-3">{{ $post->content }}</p>
             </article>
 
         </div>

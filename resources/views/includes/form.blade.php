@@ -1,10 +1,9 @@
 <form method="post" action="{{ route('message.store') }}">
 
     @csrf
-    <!-- @method('PUT') -->
 
-    <div class="form-group">
-        <label>Name</label>
+    <div class="form-group mb-2">
+        <label>Имя</label>
         <input type="text" class="form-control {{ $errors->has('name') ? 'error' : '' }}" name="name" id="name">
         <!-- Error -->
         @if ($errors->has('name'))
@@ -13,7 +12,8 @@
         </div>
         @endif
     </div>
-    <div class="form-group">
+
+    <div class="form-group mb-2">
         <label>Email</label>
         <input type="email" class="form-control {{ $errors->has('email') ? 'error' : '' }}" name="email" id="email">
         @if ($errors->has('email'))
@@ -22,8 +22,9 @@
         </div>
         @endif
     </div>
-    <div class="form-group">
-        <label>Phone</label>
+
+    <div class="form-group mb-2">
+        <label>Телефон</label>
         <input type="text" class="form-control {{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone">
         @if ($errors->has('phone'))
         <div class="error">
@@ -31,8 +32,9 @@
         </div>
         @endif
     </div>
-    <div class="form-group">
-        <label>Subject</label>
+
+    <div class="form-group mb-2">
+        <label>Тема</label>
         <input type="text" class="form-control {{ $errors->has('subject') ? 'error' : '' }}" name="subject" id="subject">
         @if ($errors->has('subject'))
         <div class="error">
@@ -40,8 +42,9 @@
         </div>
         @endif
     </div>
-    <div class="form-group">
-        <label>Message</label>
+
+    <div class="form-group mb-2">
+        <label>Сообщение</label>
         <textarea class="form-control {{ $errors->has('message') ? 'error' : '' }}" name="message" id="message" rows="4"></textarea>
         @if ($errors->has('message'))
         <div class="error">
@@ -49,5 +52,6 @@
         </div>
         @endif
     </div>
-    <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+    <br>
+    <input type="submit" name="send" value="Отправить" class="btn btn-success">
 </form>

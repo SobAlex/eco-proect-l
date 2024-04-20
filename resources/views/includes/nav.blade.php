@@ -26,7 +26,7 @@
 </div>
 <div class="container nav-scroller">
     <a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i>Меню</a>
-    <nav>
+    <nav class="rounded">
         <ul class="menu">
             <div class="row">
                 <div class="col-8">
@@ -97,7 +97,7 @@
                     </li>
                 </div>
                 <div class="col-4 text-end">
-                    @include('includes.admin-nav')
+                    @include('includes.admin-nav-menu')
                 </div>
             </div>
         </ul>

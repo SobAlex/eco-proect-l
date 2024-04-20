@@ -4,7 +4,7 @@
 
 <div class="container mb-3">
     <div class="row">
-        <div class="col-7">
+        <div class="col-lg-8">
             <h1 class="mb-4">Редактировать категорию</h1>
 
             <form action="{{ route('admin.category.update', $category->slug) }}" method="POST" enctype="multipart/form-data">
@@ -55,6 +55,9 @@
                 </div>
 
             </form>
+        </div>
+        <div class="col-lg-4">
+            @include('includes.admin-nav-content')
         </div>
     </div>
 </div>

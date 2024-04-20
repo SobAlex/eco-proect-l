@@ -23,7 +23,7 @@
                 <div class="col">
                     <div class="row row-cols-1 row-cols-sm-2 g-4">
 
-                        @foreach ($postsCat1 as $postCat1 )
+                        @foreach ($postsCat1 as $postCat1)
 
                         <div class="col d-flex flex-column gap-2">
                             <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
@@ -48,7 +48,7 @@
                 <div class="col">
                     <div class="row row-cols-1 row-cols-sm-2 g-4">
 
-                        @foreach ($postsCat2 as $postCat2 )
+                        @foreach ($postsCat2 as $postCat2)
 
                         <div class="col d-flex flex-column gap-2">
                             <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">

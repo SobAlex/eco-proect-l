@@ -5,8 +5,6 @@ use Illuminate\Auth\Middleware\Authenticate;
 use App\Http\Controllers\ContactUsFormController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/message', [ContactUsFormController::class, 'ContactUsForm'])->name('message.store');
-
 // test route
 Route::get('/test/{id}', [TestController::class, 'test']);
 
@@ -46,6 +44,11 @@ Route::group(['middleware' => ['auth', 'isadmin']], function () {
     Route::get('/admin/contacts/{contact}/edit', App\Http\Controllers\Admin\Contact\EditController::class)->name('admin.contact.edit');
     Route::put('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\UpdateController::class)->name('admin.contact.update');
     Route::delete('/admin/contacts/{contact}', App\Http\Controllers\Admin\Contact\DeleteController::class)->name('admin.contact.delete');
+
+    Route::get('/admin/messages', App\Http\Controllers\Admin\Message\IndexController::class)->name('admin.message.index');
+    Route::get('/admin/messages/{id}', App\Http\Controllers\Admin\Message\ShowController::class)->name('admin.message.show');
 });
 
 Auth::routes();
+
+Route::post('/message', [ContactUsFormController::class, 'ContactUsForm'])->name('message.store');
