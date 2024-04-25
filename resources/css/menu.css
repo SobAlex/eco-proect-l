@@ -5,11 +5,13 @@ div {
 nav {
     display: block;
     background: slategrey;
-    /* border-radius: 7px; */
+    /* border: solid 2px blue; */
 }
 .menu {
     display: block;
-    padding-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
 }
 .menu li {
     display: inline-block;

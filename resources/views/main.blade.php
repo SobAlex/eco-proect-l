@@ -15,8 +15,8 @@
         </div>
 
         <div class="feature col">
-            <h2><a href="{{ route('category.show', $category->slug) }}">{{ $category->title }}</a></h2>
-            <p>{{ $category->short_content }}</p>
+            <h2 class="lh-1"><a class="fs-4 text" href="{{ route('category.show', $category->slug) }}">{{ $category->title }}</a></h2>
+            <p class="fs-6 text">{{ $category->short_content }}</p>
         </div>
 
         @endforeach
@@ -27,10 +27,17 @@
 
 
 <div class="px-4 py-5 text-center border-top">
-    <img class="d-block mx-auto mb-4" src="logo.png" alt="" width="72">
-    <p class="pb-2 text-center"><b>О компании</b></p>
-    <div class="col-lg-6 mx-auto">
-        <p>{{ $contact->main_text }}</p>
+    <p class="pb-2 text-center fs-3 text"><b>О компании</b></p>
+    <div class="col-lg-10 mx-auto fs-5 text">
+        <p class="text-start">
+            ООО "Природные ресурсы" предлагает Вам комплекс <a href="/categories">услуг</a> в области соблюдения требований санитарного, экологического законодательства, законодательства в области градостроительной деятельности, охраны труда и при эксплуатации действующих объектов.
+        </p>
+        <p class="text-start">
+            Услуги оказываются высококвалифицированным персоналом с многолетним опытом разработки и согласования проектной документации, лабораторных исследований и сопровождения экологического характера для промышленных объектов и производств, объектов транспорта, связи, сельского хозяйства, энергетики, опытно-экспериментальных производств, объектов коммунального назначения и соци-альной сферы.
+        </p>
+        <p class="text-start">
+            Укомплектованность большим парком новейших лабораторных приборов, автомобильным транспортом позволяет нашим сотрудникам оперативно выполнять потребности клиента в кратчайшие сроки с высоким качеством их выполнения, с гибкой системой цен и форм оплат по всему УрФО и в других регионах РФ. Разра-ботка документации выполняется в соответствии с требованиями законодательства РФ с использованием сертифицированных программных продуктов.
+        </p>
     </div>
 </div>
 
@@ -38,10 +45,9 @@
     <div class="row align-items-center g-lg-5 py-5">
 
         <div class="col-lg-6 text-center text-lg-start">
-            <p class="pb-2 text-center"><b>Оставить заявку</b></p>
-            <p>Below is an example form built entirely with Bootstrap’s form controls.
-                Each required form group has a validation state that can be triggered by attempting to submit
-                the form without completing it.</p>
+            <p class="pb-2 text-center fs-3 text"><b>Оставить заявку</b></p>
+            <p class="fs-5 text text-start">Сроки выполнения работ и объемы будут оговорены при заключении договора.</p>
+            <p class="fs-5 text text-start">Гарантируем высокое качество выполнения работ, гибкую систему формирования цен и оплаты работ, обязательную конфиденциальность.</p>
         </div>
 
         <div class="col-lg-6">
@@ -54,20 +60,20 @@
 <div class="container px-4 py-5 border-top">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
-        <div class="col-lg-6">
-            <p class="mb-4"><b>{{ $contact->name_firm }}</b></p>
+        <div class="col-lg-6 ">
+            <p class="mb-4 fs-3 text"><b>{{ $contact->name_firm }}</b></p>
 
-            <p>{{ $contact->slogan }}</p>
+            <p class="fs-5 text lh-sm">{{ $contact->slogan }}</p>
 
-            <p>Адрес: {{ $contact->adress }}</p>
+            <p class="fs-5 text">Адрес: {{ $contact->adress }}</p>
 
-            <p>График работы: {{ $contact->work_time }}</p>
+            <p class="fs-5 text">График работы: {{ $contact->work_time }}</p>
 
-            <p>Раб. тел.: <a href="tel:{{ $contact->tel_work }}">{{ $contact->tel_work }}</a></p>
+            <p class="fs-5 text">Раб. тел.: <a href="tel:{{ $contact->tel_work }}">{{ $contact->tel_work }}</a></p>
 
-            <p>Моб. тел.: <a href="tel:{{ $contact->tel_mob }}">{{ $contact->tel_mob }}</a></p>
+            <p class="fs-5 text">Моб. тел.: <a href="tel:{{ $contact->tel_mob }}">{{ $contact->tel_mob }}</a></p>
 
-            <p>E-mail: <a href="mailto:presurseco@mail.ru">{{ $contact->email }}</a></p>
+            <p class="fs-5 text">E-mail: <a href="mailto:presurseco@mail.ru">{{ $contact->email }}</a></p>
 
         </div>
 

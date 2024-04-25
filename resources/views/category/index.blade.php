@@ -4,9 +4,8 @@
 
 <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
     <div class="col-lg-6 px-0">
-        <h1 class="display-4 fst-italic">Это каталог услуг с категориями!!!</h1>
-        <p class="lead my-3">Тут дохуя всего лишнего. Но в целом много и полезного. Прибраться и будет заебок. Тут пока
-            ничего не работает так что можешь не тыкать.</p>
+        <h1 class="display-4 fst-italic">Санитарная и экологическая безопасность</h1>
+        <p class="lead my-3">Наши основные направления деятельности</p>
     </div>
 </div>
 
@@ -17,7 +16,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category1->title }}</h2>
                     <p class="text-body-secondary">{{ $category1->short_content }}</p>
-                    <a href="{{ route('category.show', $category1->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category1->slug) }}" class="btn btn-primary btn-lg">Все услуги</a>
                 </div>
 
                 <div class="col">
@@ -27,7 +26,7 @@
 
                         <div class="col d-flex flex-column gap-2">
                             <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                                <svg class="bi" width="1em" height="1em">
+                                <svg class="bi bi-globe2" width="1em" height="1em">
                                     <use xlink:href="#collection" />
                                 </svg>
                             </div>
@@ -67,7 +66,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category2->title }}</h2>
                     <p class="text-body-secondary">{{ $category2->short_content }}</p>
-                    <a href="{{ route('category.show', $category2->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category2->slug) }}" class="btn btn-primary btn-lg">Все услуги</a>
                 </div>
 
             </div>
@@ -78,7 +77,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category3->title }}</h2>
                     <p class="text-body-secondary">{{ $category3->short_content }}</p>
-                    <a href="{{ route('category.show', $category3->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category3->slug) }}" class="btn btn-primary btn-lg">Все услуги</a>
                 </div>
 
                 <div class="col">
@@ -128,7 +127,7 @@
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">{{ $category4->title }}</h2>
                     <p class="text-body-secondary">{{ $category4->short_content }}</p>
-                    <a href="{{ route('category.show', $category4->slug) }}" class="btn btn-primary btn-lg">Перейти</a>
+                    <a href="{{ route('category.show', $category4->slug) }}" class="btn btn-primary btn-lg">Все услуги</a>
                 </div>
 
 
