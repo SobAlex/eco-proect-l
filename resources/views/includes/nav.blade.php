@@ -6,7 +6,7 @@
     </div>
     <div class="col-4">
         <p>
-            <span><b>{{ $contactHeader->name_firm }}</b></span><br>
+            <span class="fs-4 text"><b>{{ $contactHeader->name_firm }}</b></span><br>
             {{ $contactHeader->slogan }}
         </p>
     </div>

@@ -10,10 +10,11 @@
             @foreach ($slides as $slide)
 
             <div class="carousel-item active">
-                <img src="{{ $slide->image }}" class="d-block w-100 h-100" alt="{{$slide->image}}">
+                <img src="{{ $slide->image }}" class="d-block w-100 h-100  rounded" alt="{{$slide->image}}">
                 <div class="carousel-caption d-none d-md-block">
-                    <p>{{ $slide->title }}</p>
-                    <p>{{ $slide->content }}</p>
+                    <p class="fs-2 text">{{ $slide->title }}</p>
+                    <p class="fs-5 text">{{ $slide->content }}</p>
+                    <p><a class="btn btn-success" href="{{ route('post.show', $slide->slug) }}">Перейти</a></p>
                 </div>
             </div>
 

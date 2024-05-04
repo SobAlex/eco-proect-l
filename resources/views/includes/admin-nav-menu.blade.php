@@ -1,9 +1,16 @@
 @auth
 
 @if(Auth::user()->isAdmin())
-<li>
+<li class="dropdown">
     <a href="{{ route('admin.home.index') }}">Админ</a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="nav-link" href="{{ route('admin.message.index') }}">Заявки</a></li>
+        <li><a class="nav-link" href="{{ route('admin.category.index') }}">Список категорий услуг</a></li>
+        <li><a class="nav-link" href="{{ route('admin.post.index') }}">Список услуг</a></li>
+        <li><a class="nav-link" href="{{ route('admin.contact.index') }}">Мои контакты</a></li>
+    </ul>
 </li>
+
 @endif
 
 

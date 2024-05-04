@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container mb-3">
-    <div class="row">
+    <div class="row p-5">
         <div class="col-lg-8">
             <div class="d-flex">
                 <img src="{{ Vite::asset('resources/img/logo.png')}}" alt="Logo" width="70">
@@ -22,14 +22,9 @@
 
             <p><b>E-mail:</b> {{ $contact->email }}</p>
 
-            <p><b>Текст на главной:</b> {{ $contact->main_text }}</p>
-
             <div class="d-flex inline-block">
                 <a class=" btn btn-success me-3" href="{{ route('admin.contact.edit', $contact->id) }}">Редактировать</a>
             </div>
-        </div>
-        <div class="col-lg-4">
-            @include('includes.admin-nav-content')
         </div>
     </div>
 </div>

@@ -47,7 +47,14 @@
         <div class="col-lg-6 text-center text-lg-start">
             <p class="pb-2 text-center fs-3 text"><b>Оставить заявку</b></p>
             <p class="fs-5 text text-start">Сроки выполнения работ и объемы будут оговорены при заключении договора.</p>
-            <p class="fs-5 text text-start">Гарантируем высокое качество выполнения работ, гибкую систему формирования цен и оплаты работ, обязательную конфиденциальность.</p>
+            <p class="fs-5 text text-start">Гарантируем:
+            <ul>
+                <li class="fs-5 text">высокое качество выполнения работ;</li>
+                <li class="fs-5 text">гибкую систему формирования цен;</li>
+                <li class="fs-5 text">оплаты работ;</li>
+                <li class="fs-5 text">обязательную конфиденциальность.</li>
+            </ul>
+            </p>
         </div>
 
         <div class="col-lg-6">
@@ -61,19 +68,8 @@
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
         <div class="col-lg-6 ">
-            <p class="mb-4 fs-3 text"><b>{{ $contact->name_firm }}</b></p>
 
-            <p class="fs-5 text lh-sm">{{ $contact->slogan }}</p>
-
-            <p class="fs-5 text">Адрес: {{ $contact->adress }}</p>
-
-            <p class="fs-5 text">График работы: {{ $contact->work_time }}</p>
-
-            <p class="fs-5 text">Раб. тел.: <a href="tel:{{ $contact->tel_work }}">{{ $contact->tel_work }}</a></p>
-
-            <p class="fs-5 text">Моб. тел.: <a href="tel:{{ $contact->tel_mob }}">{{ $contact->tel_mob }}</a></p>
-
-            <p class="fs-5 text">E-mail: <a href="mailto:presurseco@mail.ru">{{ $contact->email }}</a></p>
+            @include('includes.contact')
 
         </div>
 

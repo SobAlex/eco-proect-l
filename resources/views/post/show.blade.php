@@ -1,6 +1,6 @@
 @extends('layouts.main', [
-'title' => "$post->SEO_title",
-'description' => "$post->SEO_description",
+'title' => "$post->SEO_title - ООО 'Природные ресурсы'!",
+'description' => "$post->SEO_description Заказать услугу: +7 (343) 363-65-63",
 ])
 
 @section('content')
