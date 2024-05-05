@@ -28,7 +28,7 @@ return new class extends Migration
             $table->boolean('isPublick')->default('1');
 
             $table->timestamps();
-            $table->softDeletes();
+            $table->softDeletes()->nullable();
         });
     }
 
