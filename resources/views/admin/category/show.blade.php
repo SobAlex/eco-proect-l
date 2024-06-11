@@ -17,9 +17,9 @@
                 <a class="btn btn-success me-3" href="{{ route('admin.category.edit', $category->slug) }}">Редактировать</a>
             </div>
         </div>
-        <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
             @include('includes.admin-nav-content')
-        </div>
+        </div> -->
     </div>
 </div>
 @endsection

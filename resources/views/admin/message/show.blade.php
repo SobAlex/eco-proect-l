@@ -18,9 +18,9 @@
 
             <p><b>Сообщение:</b> {{ $message->message }}</p>
         </div>
-        <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
             @include('includes.admin-nav-content')
-        </div>
+        </div> -->
     </div>
 </div>
 @endsection

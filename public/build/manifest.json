@@ -1,0 +1,37 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DPM9veCC.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/font/fontawesome-webfont.eot": {
+    "file": "assets/fontawesome-webfont-Cafniph6.eot",
+    "src": "resources/font/fontawesome-webfont.eot"
+  },
+  "resources/font/fontawesome-webfont.svg": {
+    "file": "assets/fontawesome-webfont-CjVf0WFR.svg",
+    "src": "resources/font/fontawesome-webfont.svg"
+  },
+  "resources/font/fontawesome-webfont.ttf": {
+    "file": "assets/fontawesome-webfont-Ce2GFjO-.ttf",
+    "src": "resources/font/fontawesome-webfont.ttf"
+  },
+  "resources/font/fontawesome-webfont.woff": {
+    "file": "assets/fontawesome-webfont-DtxKkWZm.woff",
+    "src": "resources/font/fontawesome-webfont.woff"
+  },
+  "resources/img/icons8-whatsapp-48.png": {
+    "file": "assets/icons8-whatsapp-48-DFh_Js_l.png",
+    "src": "resources/img/icons8-whatsapp-48.png"
+  },
+  "resources/img/logo.png": {
+    "file": "assets/logo-DygrE5AV.png",
+    "src": "resources/img/logo.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Dsp2-2yT.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
