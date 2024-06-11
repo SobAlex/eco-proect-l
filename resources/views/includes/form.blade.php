@@ -52,6 +52,15 @@
         </div>
         @endif
     </div>
-    <br>
+    <div>
+        <a href="/uploads/Политика_ОПД_ПриродныеРесурсы_docx.pdf">Политика обработки персональных данных</a><br>
+        <input type="checkbox" name="politics" value="on" required>
+        @if ($errors->has('politics'))
+            <div class="error">
+                {{ $errors->first('politics') }}
+            </div>
+        @endif
+        Я согласен (-на) на обработку персональных данных
+    </div>
     <input type="submit" name="send" value="Отправить" class="btn btn-success">
 </form>

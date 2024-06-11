@@ -18,7 +18,8 @@ class ContactUsFormController extends Controller
             'email' => 'required|email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'subject' => 'required',
-            'message' => 'required'
+            'message' => 'required',
+            'politics' => 'required|in:on'
         ]);
         //  Store data in database
         Message::create($request->all());
@@ -37,7 +38,8 @@ class ContactUsFormController extends Controller
         // flash('Заявка успешно отправлена! Мы скоро свяжемся с вами.');
 
         // return view('/mail');
-        return back()->with('success', 'Заявка успешно отправлена! Мы скоро свяжемся с вами.');
+        // return redirect()->back()->with('message',"This is Success Message");
+        return redirect()->back()->with('success', 'Заявка успешно отправлена! Мы скоро свяжемся с вами.');
         // return back();
     }
 }
