@@ -18,7 +18,7 @@ class StoreController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $path = 'uploads/category/';
+            $path = 'public/uploads/category/';
             $file->move($path, $filename);
         };
 

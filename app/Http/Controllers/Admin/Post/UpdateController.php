@@ -16,7 +16,7 @@ class UpdateController extends Controller
 
         $post = Post::where('slug', $slug)->first();
 
-        $path = 'uploads/post/';
+        $path = 'public/uploads/post/';
         $filename = 'default.jpg';
 
         if ($request->hasFile('image')) {

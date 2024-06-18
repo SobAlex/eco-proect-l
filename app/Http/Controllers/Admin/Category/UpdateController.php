@@ -16,7 +16,7 @@ class UpdateController extends Controller
 
         $category = Category::where('slug', $slug)->first();
 
-        $path = 'uploads/category/';
+        $path = 'public/uploads/category/';
         $filename = 'default.jpg';
 
         if ($request->has('image')) {

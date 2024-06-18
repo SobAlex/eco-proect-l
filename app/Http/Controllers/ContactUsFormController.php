@@ -32,7 +32,7 @@ class ContactUsFormController extends Controller
             'user_query' => $request->get('message'),
         ), function ($message) use ($request) {
             $message->from($request->email);
-            $message->to('soboldev@yandex.ru', 'eco-proect-l')->subject($request->get('subject'));
+            $message->to('soboldev@yandex.ru', 'eco-proect')->subject($request->get('subject'));
         });
 
         // flash('Заявка успешно отправлена! Мы скоро свяжемся с вами.');
